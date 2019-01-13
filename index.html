@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Crystal Game</title>
+</head>
+<body style="padding-bottom: 62px">
+    <div class="container">
+        <!--Header-->
+        <div class="row">
+            <div class="col-12">
+                    <h1 class="d-flex justify-content-start">Crystal Collector</h1>
+                    <p class="d-flex justify-content-start">
+                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Click here for instructions!
+                    </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        Each crystal has been given a random (hidden!) value.  Click the crystals to increase your counter.  Try to make your counter match the target number!  If you go over, you lose :(
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!--Main Game row with two columns-->
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <!--Random number / playing field-->
+                <p><h2>Wins: <span id="wins"></span> | Losses: <span id="losses"></span></h2></p>
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">Target Number: <span id="targetNumber"></span></h1>
+                    </div>
+                </div>
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">Current Number: <span id="counter"></span></h1>
+                    </div>
+                </div>    
+            </div>
+            <div class="col-md-6 col-12">
+                <!--Crystal grid-->
+                <div class="row">
+                    <div class="col-6">
+                        <!--First Crystal-->
+                        <img class="img-fluid m-4" id="crystal1" src="assets/images/crystal1.svg">
+                    </div>
+                    <div class="col-6">
+                        <!--Second Crystal-->
+                        <img class="img-fluid m-4" id="crystal2" src="assets/images/crystal2.svg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <!--Third Crystal-->
+                        <img class="img-fluid m-4" id="crystal3" src="assets/images/crystal3.svg">
+                    </div>
+                    <div class="col-6">
+                        <!--Fourth Crystal-->
+                        <img class="img-fluid m-4" id="crystal4" src="assets/images/crystal4.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-12">
+                <button class="btn btn-warning m-2" id="newGame" onclick="newGame()">New Game</button><button class="btn btn-danger m-2" id="resetScores" onclick="resetScores()">Reset Scores</button>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar fixed-bottom navbar-light bg-light justify-content-start">
+        <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </nav>
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
